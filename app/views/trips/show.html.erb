@@ -1,0 +1,88 @@
+<h1>Show Trip</h1>
+
+<%= link_to 'New Journey', new_trip_path %> | <%= link_to 'Journey List', trips_path %> | <%= link_to 'Edit', edit_trip_path %>
+
+<p>
+  <strong>Journey Name:</strong>
+  <%= @trip.journey_name %>
+</p>
+ 
+<p>
+  <strong>IMEI No:</strong>
+  <%= @trip.imei_no %>
+</p>
+
+<p>
+  <strong>Start Latitude:</strong>
+  <%= @trip.start_latitude %>
+</p>
+
+<p>
+  <strong>Start Longitude:</strong>
+  <%= @trip.start_longitude %>
+</p>
+
+<p>
+  <strong>Stop Latitude:</strong>
+  <%= @trip.stop_latitude %>
+</p>
+
+<p>
+  <strong>Stop Longitude:</strong>
+  <%= @trip.stop_longitude %>
+</p>
+
+<p>
+  <strong>Average Speed:</strong>
+  <%= @trip.avg_spd %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @trip.remarks %>
+</p>
+
+<h3>Overspeed :-</h3>
+<% @trip.ovrspds.each do |spd| %>
+  <p>
+    <strong>Overspeed:</strong>
+    <%= spd.over_speed %>
+  </p>
+ 
+  <p>
+    <strong>Overspeed Latitude:</strong>
+    <%= spd.ovrspd_latitude %>
+  </p>
+
+  <p>
+    <strong>Overspeed Longitude:</strong>
+    <%= spd.ovrspd_longitude %>
+  </p>
+
+<% end %>
+
+
+<h3>Add Overspeed:</h3>
+<%= form_for([@trip, @trip.ovrspds.build]) do |f| %>
+
+  <p>
+    <%= f.label :overspeed %><br>
+    <%= f.text_field :over_speed %>
+  </p>
+
+  <p>
+    <%= f.label :overspeed_latitude %><br>
+    <%= f.text_field :ovrspd_latitude %>
+  </p>
+	
+  <p>
+    <%= f.label :overspeed_longitude %><br>
+    <%= f.text_field :ovrspd_longitude %>
+  </p>
+	
+  <p>
+    <%= f.submit 'Overspeed' %>
+  </p>
+
+<% end %>
+

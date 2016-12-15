@@ -1,0 +1,44 @@
+<h1>Edit Journey</h1>
+
+<%= form_for :trip, url: trip_path(@trip), method: :patch do |f| %>
+
+  <p>
+    <%= f.label "Journey Name:" %><br>
+    <%= f.text_field :journey_name %>
+  </p>
+ 
+  <p>
+    <%= f.label "IMEI No:" %><br>
+    <%= f.text_area :imei_no %>
+  </p>
+  
+  <p>
+    <%= f.label "Start Latitude:" %><br>
+    <%= f.text_area :start_latitude %>
+  </p>
+  
+  <p>
+    <%= f.label "Start Latitude:" %><br>
+    <%= f.text_area :start_longitude %>
+  </p>
+  
+  <p>
+    <%= f.label "Stop Latitude:" %><br>
+    <%= f.text_area :stop_latitude %>
+  </p>
+  
+  <p>
+    <%= f.label "Stop Longitude:" %><br>
+    <%= f.text_area :stop_longitude %>
+  </p>
+  
+  <p>
+    <%= f.label "Average Speed" %><br>
+    <%= f.text_area :avg_spd %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+	
+<% end %>

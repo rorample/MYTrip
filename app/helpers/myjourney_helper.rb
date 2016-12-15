@@ -1,0 +1,2 @@
+module MyjourneyHelper
+end

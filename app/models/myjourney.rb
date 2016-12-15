@@ -1,0 +1,2 @@
+class Myjourney < ApplicationRecord
+end

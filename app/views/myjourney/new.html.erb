@@ -1,0 +1,53 @@
+<div class='journeytitle'> Add New Journey</div>
+
+<%= form_for :myjourney, url: myjourney_path do |f| %>
+
+<!--
+	<% if @journey.errors.any? %>
+	    <div id="error_explanation">
+	      <h2>
+	        <%= pluralize(@journey.errors.count, "error") %> prohibited
+	        this article from being saved:
+	      </h2>
+	      <ul>
+	        <% @journey.errors.full_messages.each do |msg| %>
+	          <li><%= msg %></li>
+	        <% end %>
+	      </ul>
+	    </div>
+	<% end %>
+-->
+
+	<p>
+		<%= f.label "Journey Name:" %>
+		<%= f.text_field :journey_name %>
+	</p>
+	
+	<p>
+		<%= f.label "IMEI NO:" %>
+		<%= f.text_field :imei_no %>
+	</p>
+	
+	<p>
+		<%= f.label "Start Latitude:" %>
+		<%= f.text_field :start_latitude %>
+	</p>
+	
+	<p>
+		<%= f.label "Start Longitude:" %>
+		<%= f.text_field :start_longitude %>
+	</p>
+	
+	<p>
+		<%= f.label "Remarks:" %>
+		<%= f.text_field :remarks %>
+	</p>
+	
+	<br/>
+	
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>
+

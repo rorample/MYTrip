@@ -1,0 +1,22 @@
+
+<div class = "titledisplay">
+	<!--<%= image_tag "ROR Image.png", size: "60x60" %>-->
+	Show Journey
+</div>
+
+<div>
+  <div class = "labledisplay">Journey Name:</div>
+  <div class = "namedisplay"><%= @journey.journey_name %></div>
+</div>
+ 
+<div>
+  <div class = "labledisplay">IMEI NO:</div>
+  <div class = "namedisplay"><%= @journey.imei_no %></div>
+</div>
+
+
+<%= link_to 'Edit', edit_myjourney_path(@journey) %> |
+<%= link_to 'Back', myjourney_path %>
+
+
+

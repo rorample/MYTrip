@@ -1,0 +1,40 @@
+<!--<h1>Welcome To ROR App.</h1>-->
+
+<div class = "titledisplay">List Articles</div>
+<% h=@journey_pagi.count%>
+<h3>Total: <%= h%></h3>
+<h4><%= link_to 'Create New article', new_myjourney_path %></h4> 
+<h5><%= link_to 'Back', controller: 'welcome' %></h5>
+
+<div>
+  <table border="8", width="80%">
+	<tr>
+		<th>Journey Name:</th>
+		<th>IMEI No</th>
+		<th colspan="5"></th>
+	</tr>
+	<%shw=0%>
+	<% @journey_pagi.each_with_index do |journey,i| %>
+		<tr>
+			<% i= i+1 %>
+			<td><%= journey.journey_name %></td>
+			<td><%= journey.imei_no %></td>
+			<td><%= link_to "Show", myjourney_path(journey) %></td>
+			<td><%= link_to "Edit", edit_myjourney_path(journey) %></td>
+			<td><%= link_to "Delete", myjourney_path(journey),
+              		method: :delete,
+              		data: { confirm: 'Are you sure?' } %></td>
+				<% shw=i %>
+		</tr>
+				
+	<% end %>
+	
+	<h3>Showing: <%= shw %></h3>		
+		
+  </table>
+  <br />
+  <%= will_paginate @journey_pagi %>
+</div>
+
+
+

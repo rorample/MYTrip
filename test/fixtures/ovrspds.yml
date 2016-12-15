@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  journey_id: MyString
+  over_speed: MyString
+  ovrspd_latitude: MyString
+  ovrspd_longitude: MyString
+  trip: 
+
+two:
+  journey_id: MyString
+  over_speed: MyString
+  ovrspd_latitude: MyString
+  ovrspd_longitude: MyString
+  trip: 

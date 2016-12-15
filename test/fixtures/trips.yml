@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  journey_name: MyString
+  imei_no: MyText
+  start_latitude: MyText
+  start_longitude: MyText
+  remarks: MyString
+
+two:
+  journey_name: MyString
+  imei_no: MyText
+  start_latitude: MyText
+  start_longitude: MyText
+  remarks: MyString

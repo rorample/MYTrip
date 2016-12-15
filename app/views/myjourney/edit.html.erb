@@ -1,0 +1,35 @@
+<h1>Editing Journey</h1>
+
+<%= form_for :myjourney, url: myjourney_path(@journey), method: :patch do |f| %>
+
+  <% if @journey.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@journey.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @journey.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <p>
+    <%= f.label "Journey Name:" %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label "Text:" %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+	
+<% end %>
+
+<%= link_to 'Back', myjourney_path %>
