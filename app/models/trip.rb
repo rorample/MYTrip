@@ -4,9 +4,9 @@ class Trip < ApplicationRecord
   
   has_many :ovrspds
 
-  def as_json(options={})
+=begin  def as_json(options={})
     { :journey_name => self.journey_name, 
       :avg_spd =>self.avg_spd }
   end
-  
+=end  
 end
