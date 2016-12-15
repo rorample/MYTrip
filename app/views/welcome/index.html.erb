@@ -1,4 +1,7 @@
-<div class="titledisplay">Welcome To My Journey Application.. <%= @user.email %></div>
+<div class="titledisplay">Welcome To My Journey Application.. <%= @user.email %></div> 
 
+<div class="addjourney"><%= link_to 'Click to Show Journey List', controller: 'trips', id:@user.id %></div>
 
-<div class="addjourney"><%= link_to 'Click to Show Journey List', controller: 'trips' %></div>
+<div class="addjourney"><%= link_to 'Click to Show Journey List Json', controller: 'trips', action: 'index1', id:@user.id %></div>
+
+<!-- <%= link_to('Logout', :controller=> "sessions", :action=> "new", :method => :delete) %> -->

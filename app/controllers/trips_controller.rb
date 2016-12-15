@@ -3,7 +3,14 @@ class TripsController < ApplicationController
   def index
     @trip = Trip.all
     @trip_pagi = @trip.paginate(:page => params[:page], :per_page => 4)
-#    @user = User.find(params[:id])
+    #render :json => @trip
+    @user = User.find(params[:id])
+  end
+
+  def index1
+    @trip = Trip.all
+    render :json => @trip
+    @user = User.find(params[:id])
   end
   
   def show

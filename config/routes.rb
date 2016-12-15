@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   
   get 'users/new'
-
   get 'sessions/new'
-
+  get 'trips/index1'
   get 'welcome/index'
 
 =begin
@@ -36,6 +35,5 @@ Rails.application.routes.draw do
   end
   
   root :controller=> "sessions", :action=> "new"
-  #root :controller=> "trips", :action=> "index"
   
 end
