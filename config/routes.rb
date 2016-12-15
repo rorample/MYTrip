@@ -35,7 +35,7 @@ Rails.application.routes.draw do
     end
   end
   
-  #root :controller=> "sessions", :action=> "new"
-  root :controller=> "trips", :action=> "index"
+  root :controller=> "sessions", :action=> "new"
+  #root :controller=> "trips", :action=> "index"
   
 end
